@@ -33,6 +33,11 @@ const PRODUCTS = [
     badge: "Pieza Única",
     featured: true,
     image: "assets/images/eva_ceramica_diaguita.jpg",
+    images: [
+      "assets/images/eva_ceramica_diaguita.jpg",
+      "assets/images/eva_tallado_madera.jpg",
+      "assets/images/eva_joyeria_lapis.jpg"
+    ],
     description: "Hermosa vasija elaborada y pintada a mano con pigmentos minerales naturales. Recrea los patrones geométricos tradicionales diaguitas y andinos. Ideal para amantes del arte ancestral y la decoración de colección.",
     details: {
       material: "Arcilla natural moldeada a mano y barniz ecológico",
@@ -51,6 +56,10 @@ const PRODUCTS = [
     badge: "Exclusivo",
     featured: true,
     image: "assets/images/eva_joyeria_lapis.jpg",
+    images: [
+      "assets/images/eva_joyeria_lapis.jpg",
+      "assets/images/eva_ceramica_diaguita.jpg"
+    ],
     description: "Exquisita joya de autor labrada en plata 950 con una gema pulida de Lapislázuli chileno de intenso tono azul ultramar con destellos dorados de pirita. Incluye cadena fina de plata.",
     details: {
       material: "Plata fina 950 y Lapislázuli natural chileno",
@@ -69,9 +78,14 @@ const PRODUCTS = [
     badge: "Colección Arica",
     featured: true,
     image: "assets/images/eva_tejido_alpaca.jpg",
+    images: [
+      "assets/images/eva_tejido_alpaca.jpg",
+      "assets/images/eva_tallado_madera.jpg",
+      "assets/images/eva_ceramica_diaguita.jpg"
+    ],
     description: "Tejido artesanal confeccionado a telar tradicional con fibra de 100% lana de alpaca altiplánica. Posee una suavidad incomparable, calidez única y guarda los diseños geométricos característicos del norte de Chile.",
     details: {
-      material: "100% Lana de Alpaca pura teñida naturalmente",
+      material: "100% Lana de Alpaca pura teñida naturally",
       dimensions: "180 cm x 135 cm (Talla Única)",
       origin: "Altiplano de Parinacota",
       stockStatus: "Disponible (2 unidades)",
@@ -87,6 +101,10 @@ const PRODUCTS = [
     badge: "Pieza Única",
     featured: true,
     image: "assets/images/eva_tallado_madera.jpg",
+    images: [
+      "assets/images/eva_tallado_madera.jpg",
+      "assets/images/eva_ceramica_diaguita.jpg"
+    ],
     description: "Cuenco esculpido a mano aprovechando la veta natural y curvas orgánicas de madera noble recuperada. Su acabado pulido con ceras orgánicas resalta los matices oscuros y cálidos de la pieza.",
     details: {
       material: "Madera tallada a mano y cera de abejas",
@@ -104,7 +122,11 @@ const PRODUCTS = [
     price: 39000,
     badge: "Edición Especial",
     featured: false,
-    image: "assets/images/eva_ceramica_diaguita.jpg", // placeholder o reutilizable
+    image: "assets/images/eva_ceramica_diaguita.jpg",
+    images: [
+      "assets/images/eva_ceramica_diaguita.jpg",
+      "assets/images/eva_joyeria_lapis.jpg"
+    ],
     description: "Copa decorativa trabajada en latón y cobre rojo con finos relieves repujados a mano con simbología solar del norte grande.",
     details: {
       material: "Cobre chileno pulido y pátina protectora",
@@ -123,6 +145,10 @@ const PRODUCTS = [
     badge: "Populares",
     featured: false,
     image: "assets/images/eva_joyeria_lapis.jpg",
+    images: [
+      "assets/images/eva_joyeria_lapis.jpg",
+      "assets/images/eva_tejido_alpaca.jpg"
+    ],
     description: "Aros colgantes en plata 925 combinados con tonos rojizos de concha marina Spondylus pulida. Diseño inspirados en las culturas costeras del Pacífico sur.",
     details: {
       material: "Plata 925 y Concha Spondylus natural",
@@ -141,6 +167,10 @@ const PRODUCTS = [
     badge: "Tradicional",
     featured: false,
     image: "assets/images/eva_tejido_alpaca.jpg",
+    images: [
+      "assets/images/eva_tejido_alpaca.jpg",
+      "assets/images/eva_tallado_madera.jpg"
+    ],
     description: "Camino de mesa decorativo multicolor confeccionado con hilos de ovillo natural y guarda altiplánica tradicional.",
     details: {
       material: "Lana sintética y algodón natural",
@@ -159,6 +189,10 @@ const PRODUCTS = [
     badge: "Pieza de Colección",
     featured: false,
     image: "assets/images/eva_tallado_madera.jpg",
+    images: [
+      "assets/images/eva_tallado_madera.jpg",
+      "assets/images/eva_ceramica_diaguita.jpg"
+    ],
     description: "Escultura decorativa de pared que representa las festividades del norte de Chile, tallada en bloque sólido de alerce recuperado.",
     details: {
       material: "Madera de alerce recuperada",

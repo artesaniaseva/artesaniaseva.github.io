@@ -38,7 +38,12 @@ En el mismo archivo `js/products.js`, desplázate hasta la lista `PRODUCTS`. Par
   categoryLabel: "Cerámica y Alfarería",
   price: 35000, // Precio numérico en pesos chilenos CLP
   badge: "Pieza Única", // Etiqueta opcional (ej: "Exclusivo", "Colección Arica", "Última Unidad")
-  image: "assets/images/tu_imagen.jpg", // Ruta de la foto del producto
+  image: "assets/images/tu_imagen_principal.jpg", // Foto principal
+  images: [
+    "assets/images/tu_imagen_principal.jpg",
+    "assets/images/tu_imagen_angulo2.jpg",
+    "assets/images/tu_imagen_detalle.jpg"
+  ], // Galería de múltiples fotos para la modal
   description: "Descripción detallada del producto, su historia y características...",
   details: {
     material: "Plata y Lapislázuli",
@@ -52,11 +57,20 @@ En el mismo archivo `js/products.js`, desplázate hasta la lista `PRODUCTS`. Par
 
 ---
 
-## 📸 3. Dónde guardar las fotos de los productos
+## 📸 3. Dónde guardar y cómo configurar las fotos de los productos
 
-1. Guarda la fotografía del nuevo producto dentro de la carpeta `assets/images/`.
-2. Procura que la foto esté optimizada (formato `.jpg` o `.webp`).
-3. En la propiedad `image` del producto pon la ruta correspondiente: `"assets/images/nombre_de_foto.jpg"`.
+1. Guarda las fotografías de tus productos dentro de la carpeta `assets/images/`.
+2. Procura que las fotos estén optimizadas (formato `.jpg` o `.webp`).
+3. Para colocar **múltiples fotos** en la ventana emergente (modal) de un producto, agrega la lista `images: [...]` con las rutas de cada foto:
+   ```javascript
+   images: [
+     "assets/images/foto_principal.jpg",
+     "assets/images/foto_trasera.jpg",
+     "assets/images/foto_detalle.jpg"
+   ]
+   ```
+4. Si solo incluyes `image: "assets/images/foto.jpg"`, el sistema mostrará esa única imagen de forma normal.
+
 
 ---
 
