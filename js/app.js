@@ -80,10 +80,10 @@ document.addEventListener("DOMContentLoaded", () => {
     return PRODUCTS.filter(prod => {
       // Filter by category
       const matchesCategory = state.selectedCategory === "all" || prod.category === state.selectedCategory;
-      
+
       // Filter by search query
       const query = state.searchQuery.toLowerCase().trim();
-      const matchesSearch = !query || 
+      const matchesSearch = !query ||
         prod.title.toLowerCase().includes(query) ||
         prod.description.toLowerCase().includes(query) ||
         prod.categoryLabel.toLowerCase().includes(query) ||
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modalSku.textContent = `Ref: ${product.id}`;
     modalDescription.textContent = product.description;
 
-    // Populate Specifications
+    // Populate Specifications 
     if (product.details) {
       modalSpecsList.innerHTML = `
         <div class="spec-item"><span class="spec-key">Material:</span><span class="spec-val">${product.details.material}</span></div>
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btnShare.addEventListener("click", () => {
       if (!state.currentProduct) return;
       const shareUrl = `${window.location.origin}${window.location.pathname}#producto=${state.currentProduct.id}`;
-      
+
       if (navigator.clipboard) {
         navigator.clipboard.writeText(shareUrl).then(() => {
           showToast("¡Enlace del producto copiado al portapapeles!");
