@@ -20,120 +20,120 @@ const CATEGORIES = [
   { id: "joyeria", name: "Orfebrería y Joyas", icon: "bi-gem" },
   { id: "textil", name: "Tejidos y Textiles", icon: "bi-scissors" },
   { id: "madera", name: "Esculturas en Madera", icon: "bi-tree-fill" },
-  { id: "cobre", name: "Decoración y Cobre", icon: "bi-palette-fill" }
+  { id: "bronce", name: "Decoración y Bronce", icon: "bi-palette-fill" },
+  { id: "cuadro", name: "Cuadros y Espejos", icon: "bi-image" }
 ];
 
 const PRODUCTS = [
   {
     id: "AE-001",
-    title: "Vasija Cerámica de Inspiración Diaguita",
-    category: "ceramica",
-    categoryLabel: "Cerámica y Alfarería",
-    price: 48000,
+    title: "Pareja de Quijote y Sancho",
+    category: "bronce",
+    categoryLabel: "Decoración y Bronce",
+    price: 20000,
     badge: "Pieza Única",
     featured: true,
-    image: "assets/images/eva_ceramica_diaguita.jpg",
+    image: "assets/images/qui_02.jpeg",
     images: [
-      "assets/images/eva_ceramica_diaguita.jpg",
-      "assets/images/eva_tallado_madera.jpg",
-      "assets/images/eva_joyeria_lapis.jpg"
+      "assets/images/qui_02.jpeg",
+      "assets/images/qui_03.jpeg",
+      "assets/images/qui_04.jpeg"
     ],
-    description: "Hermosa vasija elaborada y pintada a mano con pigmentos minerales naturales. Recrea los patrones geométricos tradicionales diaguitas y andinos. Ideal para amantes del arte ancestral y la decoración de colección.",
+    description: "Set de dos figuras artesanales de bronce envejecido, representando a Don Quijote y Sancho Panza montados sobre sus respectivos animales. Presentan un acabado metálico envejecido en tonos dorados y oscuros, con detalles ornamentales y gran nivel de relieve. Ideales para decoración del hogar, vitrinas o coleccionistas.",
     details: {
-      material: "Arcilla natural moldeada a mano y barniz ecológico",
-      dimensions: "Alto: 28 cm | Diámetro máx: 22 cm",
-      origin: "Valle de Azapa, Arica",
-      stockStatus: "Disponible (1 unidad en stock)",
-      craftsman: "Taller Artesanal El Morro"
+      material: "Bronce envejecido",
+      dimensions: "Alto: 20 cm | Ancho: 22 cm",
+      origin: "Arequipa, Perú",
+      stockStatus: "Disponible (1 pareja en stock)",
+      craftsman: "-"
     }
   },
   {
     id: "AE-002",
-    title: "Colgante de Plata y Lapislázuli Natural",
-    category: "joyeria",
-    categoryLabel: "Orfebrería y Joyas",
-    price: 62000,
-    badge: "Exclusivo",
+    title: "Cuadro Decorativo Tiwanaku (Dios Viracocha)",
+    category: "cuadro",
+    categoryLabel: "Cuadros y Espejos",
+    price: 30000,
+    badge: "Pieza Única",
     featured: true,
-    image: "assets/images/eva_joyeria_lapis.jpg",
+    image: "assets/images/cua_03.jpeg",
     images: [
-      "assets/images/eva_joyeria_lapis.jpg",
-      "assets/images/eva_ceramica_diaguita.jpg"
+      "assets/images/cua_03.jpeg",
+      "assets/images/cua_04.jpeg"
     ],
-    description: "Exquisita joya de autor labrada en plata 950 con una gema pulida de Lapislázuli chileno de intenso tono azul ultramar con destellos dorados de pirita. Incluye cadena fina de plata.",
+    description: "Hermoso cuadro decorativo de inspiración Tiwanaku, adquirido en Bolivia, con diseño de temática andina y acabado metálico que aparenta ser lámina de cobre.",
     details: {
-      material: "Plata fina 950 y Lapislázuli natural chileno",
-      dimensions: "Dije: 3.5 x 2.5 cm | Cadena: 50 cm",
-      origin: "Taller de Orfebrería Arica",
-      stockStatus: "Disponible (Edición Limitada)",
-      craftsman: "Maestro Orfebre E. Vargas"
+      material: "Lámina de cobre repujado",
+      dimensions: "35 cm x 39 cm",
+      origin: "Bolivia",
+      stockStatus: "Disponible 1 ejemplar",
+      craftsman: "Miguel Galindo"
     }
   },
   {
     id: "AE-003",
-    title: "Manta Poncho de Lana de Alpaca Fina",
-    category: "textil",
-    categoryLabel: "Tejidos y Textiles",
-    price: 85000,
-    badge: "Colección Arica",
+    title: "Cuadro Decorativo Tiwanaku (Dios de los Báculos)",
+    category: "cuadro",
+    categoryLabel: "Cuadros y Espejos",
+    price: 20000,
+    badge: "Pieza Única",
     featured: true,
-    image: "assets/images/eva_tejido_alpaca.jpg",
+    image: "assets/images/cua_01.jpeg",
     images: [
-      "assets/images/eva_tejido_alpaca.jpg",
-      "assets/images/eva_tallado_madera.jpg",
-      "assets/images/eva_ceramica_diaguita.jpg"
+      "assets/images/cua_01.jpeg",
+      "assets/images/cua_02.jpeg"
     ],
-    description: "Tejido artesanal confeccionado a telar tradicional con fibra de 100% lana de alpaca altiplánica. Posee una suavidad incomparable, calidez única y guarda los diseños geométricos característicos del norte de Chile.",
+    description: "Hermoso cuadro decorativo de inspiración Tiwanaku, adquirido en Bolivia, con diseño de temática andina y acabado metálico que aparenta ser lámina de cobre.",
     details: {
-      material: "100% Lana de Alpaca pura teñida naturally",
-      dimensions: "180 cm x 135 cm (Talla Única)",
-      origin: "Altiplano de Parinacota",
-      stockStatus: "Disponible (2 unidades)",
-      craftsman: "Colectivo de Tejedoras Andinas"
+      material: "Lámina de cobre repujado",
+      dimensions: "30 cm x 30 cm",
+      origin: "Bolivia",
+      stockStatus: "Disponible 1 ejemplar",
+      craftsman: "Miguel Galindo"
     }
   },
   {
     id: "AE-004",
-    title: "Fuente Escultórica en Madera de Guayacán",
-    category: "madera",
-    categoryLabel: "Esculturas en Madera",
-    price: 54000,
+    title: "Cuadro Decorativo Tiwanaku (Dios Tunupa)",
+    category: "cuadro",
+    categoryLabel: "Cuadros y Espejos",
+    price: 20000,
     badge: "Pieza Única",
     featured: true,
-    image: "assets/images/eva_tallado_madera.jpg",
+    image: "assets/images/cua_05.jpeg",
     images: [
-      "assets/images/eva_tallado_madera.jpg",
-      "assets/images/eva_ceramica_diaguita.jpg"
+      "assets/images/cua_05.jpeg",
+      "assets/images/cua_06.jpeg"
     ],
-    description: "Cuenco esculpido a mano aprovechando la veta natural y curvas orgánicas de madera noble recuperada. Su acabado pulido con ceras orgánicas resalta los matices oscuros y cálidos de la pieza.",
+    description: "Hermoso cuadro decorativo de inspiración Tiwanaku, adquirido en Bolivia, con diseño de temática andina y acabado metálico que aparenta ser lámina de cobre.",
     details: {
-      material: "Madera tallada a mano y cera de abejas",
-      dimensions: "Largo: 35 cm | Ancho: 24 cm | Alto: 14 cm",
-      origin: "Arica",
-      stockStatus: "Disponible (Pieza única numerada)",
-      craftsman: "Escultor L. Morales"
+      material: "Lámina de cobre repujado",
+      dimensions: "30 cm x 30 cm",
+      origin: "Bolivia",
+      stockStatus: "Disponible 1 ejemplar",
+      craftsman: "Miguel Galindo"
     }
   },
   {
     id: "AE-005",
-    title: "Copa Ritual de Bronce y Cobre Repujado",
-    category: "cobre",
-    categoryLabel: "Decoración y Cobre",
-    price: 39000,
-    badge: "Edición Especial",
-    featured: false,
-    image: "assets/images/eva_ceramica_diaguita.jpg",
+    title: "Cuadro Decorativo Tiwanaku (Reunión comunitaria)",
+    category: "cuadro",
+    categoryLabel: "Cuadros y Espejos",
+    price: 20000,
+    badge: "Pieza Única",
+    featured: true,
+    image: "assets/images/cua_07.jpeg",
     images: [
-      "assets/images/eva_ceramica_diaguita.jpg",
-      "assets/images/eva_joyeria_lapis.jpg"
+      "assets/images/cua_07.jpeg",
+      "assets/images/cua_08.jpeg"
     ],
-    description: "Copa decorativa trabajada en latón y cobre rojo con finos relieves repujados a mano con simbología solar del norte grande.",
+    description: "Hermoso cuadro decorativo de inspiración Costumbrista/Colonial, adquirido en Bolivia, con diseño de temática andina y acabado metálico que aparenta ser lámina de cobre.",
     details: {
-      material: "Cobre chileno pulido y pátina protectora",
-      dimensions: "Alto: 20 cm | Diámetro: 12 cm",
-      origin: "Norte Grande, Chile",
-      stockStatus: "Disponible",
-      craftsman: "Artesanos del Cobre"
+      material: "Lámina de cobre repujado",
+      dimensions: "30 cm x 30 cm",
+      origin: "Bolivia",
+      stockStatus: "Disponible 1 ejemplar",
+      craftsman: "Miguel Galindo"
     }
   },
   {
