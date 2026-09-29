@@ -1,0 +1,36 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo circular crema -->
+  <circle cx="250" cy="250" r="240" fill="#F9F7F2" stroke="#2C3E50" stroke-width="6"/>
+  
+  <!-- Anillo decorativo textil (simplificado) -->
+  <circle cx="250" cy="250" r="225" fill="none" stroke="#C15B28" stroke-width="4" stroke-dasharray="15,10"/>
+  <circle cx="250" cy="250" r="215" fill="none" stroke="#D4AF37" stroke-width="2"/>
+
+  <!-- Texto superior curvo -->
+  <path id="topCurve" d="M 100,250 A 150,150 0 0,1 400,250" fill="none"/>
+  <text font-family="'Georgia', 'Times New Roman', serif" font-size="38" font-weight="bold" fill="#2C3E50" text-anchor="middle" letter-spacing="3">
+    <textPath href="#topCurve" startOffset="50%">ARTESANÍAS EVA</textPath>
+  </text>
+
+  <!-- Texto inferior curvo -->
+  <path id="bottomCurve" d="M 120,250 A 130,130 0 0,0 380,250" fill="none"/>
+  <text font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#C15B28" text-anchor="middle" letter-spacing="4">
+    <textPath href="#bottomCurve" startOffset="50%">BOLIVIA • PERÚ • CHILE</textPath>
+  </text>
+
+  <!-- Elemento Central: Chakana estilizada con Sol -->
+  <g transform="translate(250, 250)">
+    <!-- Círculo central (Sol) -->
+    <circle cx="0" cy="0" r="35" fill="#D4AF37" stroke="#2C3E50" stroke-width="3"/>
+    <!-- Brazos de la Chakana (escalones andinos) -->
+    <path d="M -15,-15 L -15,-45 L -45,-45 L -45,-15 L -75,-15 L -75,15 L -45,15 L -45,45 L -15,45 L -15,75 L 15,75 L 15,45 L 45,45 L 45,15 L 75,15 L 75,-15 L 45,-15 L 45,-45 L 15,-45 L 15,-15 Z" 
+          fill="#C15B28" stroke="#2C3E50" stroke-width="3" stroke-linejoin="round"/>
+    <!-- Detalle interior de la Chakana -->
+    <path d="M -15,-15 L -15,-45 L -45,-45 L -45,-15 L -45,15 L -15,15 L -15,45 L 15,45 L 15,15 L 45,15 L 45,-15 L 15,-15 Z" 
+          fill="none" stroke="#F9F7F2" stroke-width="2"/>
+  </g>
+  
+  <!-- Pequeñas estrellas/detalles a los lados del nombre EVA -->
+  <text x="85" y="260" font-size="30" fill="#D4AF37">✦</text>
+  <text x="395" y="260" font-size="30" fill="#D4AF37">✦</text>
+</svg>
