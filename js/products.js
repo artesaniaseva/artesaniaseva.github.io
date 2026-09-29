@@ -176,7 +176,7 @@ const PRODUCTS = [
     description: "Adquiere un pedazo de historia y folklore a tu hogar. Esta increíble vasija escultórica fue elaborada a mano en Pisac, Cusco (Perú). Representa una figura mitológica con detalles pintados a mano que recuerdan a las culturas precolombinas..",
     details: {
       material: "Cerámica",
-      dimensions: "37 cm x 18 cm",
+      dimensions: "Alto 37 cm x Ancho 18 cm",
       origin: "Pisac, Perú",
       stockStatus: "Disponible",
       craftsman: "Luciano P.H."
@@ -184,24 +184,25 @@ const PRODUCTS = [
   },
   {
     id: "AE-008",
-    title: "Escultura de Máscara de Salar en Madera Noble",
+    title: "Par de Cuadro Tallado PAreja Indígena",
     category: "madera",
     categoryLabel: "Esculturas en Madera",
-    price: 72000,
+    price: 28000,
     badge: "Pieza de Colección",
     featured: false,
-    image: "assets/images/eva_tallado_madera.jpg",
+    image: "assets/images/tall_01.jpg",
     images: [
-      "assets/images/eva_tallado_madera.jpg",
-      "assets/images/eva_ceramica_diaguita.jpg"
+      "assets/images/tall_01.jpg",
+      "assets/images/tall_02.jpg",
+      "assets/images/tall_03.jpg"
     ],
-    description: "Escultura decorativa de pared que representa las festividades del norte de Chile, tallada en bloque sólido de alerce recuperado.",
+    description: "Par de piezas decorativas de madera Mara tallada. Son rostros de perfil con tocados tradicionales.",
     details: {
-      material: "Madera de alerce recuperada",
-      dimensions: "Alto: 45 cm | Ancho: 20 cm",
-      origin: "Arica",
+      material: "Madera Mara",
+      dimensions: "Alto: 36 cm | Ancho: 12 cm",
+      origin: "Bolivia",
       stockStatus: "Disponible (Pieza única)",
-      craftsman: "Taller Eva Arica"
+      craftsman: "-"
     }
   }
 ];
