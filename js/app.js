@@ -515,6 +515,142 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ==========================================
+  // SUBSCRIPTION FORM (Formspree) with Validation
+  // ==========================================
+  const subscribeForm = document.getElementById("subscribeForm");
+  if (subscribeForm) {
+    const nameInput = document.getElementById("subscribeName");
+    const emailInput = document.getElementById("subscribeEmail");
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+
+    // Regex: only letters (including accented), spaces, and hyphens
+    const nameRegex = /^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑàèìòùÀÈÌÒÙâêîôûÂÊÎÔÛäëïöüÄËÏÖÜçÇ\s'-]+$/;
+    // Standard email regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+    function setFieldError(inputEl, errorEl, message) {
+      const wrapper = inputEl.closest(".input-icon-wrapper");
+      wrapper.classList.remove("input-success");
+      wrapper.classList.add("input-error");
+      errorEl.textContent = message;
+      errorEl.classList.add("visible");
+      // Trigger shake animation
+      wrapper.classList.remove("shake");
+      void wrapper.offsetWidth; // force reflow
+      wrapper.classList.add("shake");
+    }
+
+    function clearFieldError(inputEl, errorEl) {
+      const wrapper = inputEl.closest(".input-icon-wrapper");
+      wrapper.classList.remove("input-error", "shake");
+      errorEl.textContent = "";
+      errorEl.classList.remove("visible");
+    }
+
+    function setFieldSuccess(inputEl, errorEl) {
+      clearFieldError(inputEl, errorEl);
+      const wrapper = inputEl.closest(".input-icon-wrapper");
+      wrapper.classList.add("input-success");
+    }
+
+    function validateName() {
+      const value = nameInput.value.trim();
+      if (value === "") {
+        setFieldError(nameInput, nameError, "El nombre no puede estar vacío.");
+        return false;
+      }
+      if (!nameRegex.test(value)) {
+        setFieldError(nameInput, nameError, "El nombre solo debe contener letras y espacios.");
+        return false;
+      }
+      setFieldSuccess(nameInput, nameError);
+      return true;
+    }
+
+    function validateEmail() {
+      const value = emailInput.value.trim();
+      if (value === "") {
+        setFieldError(emailInput, emailError, "El correo no puede estar vacío.");
+        return false;
+      }
+      if (!emailRegex.test(value)) {
+        setFieldError(emailInput, emailError, "Ingresa un correo electrónico válido.");
+        return false;
+      }
+      setFieldSuccess(emailInput, emailError);
+      return true;
+    }
+
+    // Real-time validation on input (clears errors as user types)
+    nameInput.addEventListener("input", () => {
+      if (nameError.classList.contains("visible")) {
+        validateName();
+      }
+    });
+
+    emailInput.addEventListener("input", () => {
+      if (emailError.classList.contains("visible")) {
+        validateEmail();
+      }
+    });
+
+    // Clear visual state on blur if valid
+    nameInput.addEventListener("blur", () => {
+      if (nameInput.value.trim() !== "") validateName();
+    });
+
+    emailInput.addEventListener("blur", () => {
+      if (emailInput.value.trim() !== "") validateEmail();
+    });
+
+    subscribeForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      // Validate both fields
+      const isNameValid = validateName();
+      const isEmailValid = validateEmail();
+
+      if (!isNameValid || !isEmailValid) {
+        return; // Stop submission if validation fails
+      }
+
+      const submitBtn = document.getElementById("subscribeBtn");
+      const originalBtnHTML = submitBtn.innerHTML;
+
+      // Disable button & show loading state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<i class="bi bi-hourglass-split"></i> <span>Enviando...</span>`;
+
+      try {
+        const formData = new FormData(subscribeForm);
+        const response = await fetch(subscribeForm.action, {
+          method: "POST",
+          body: formData,
+          headers: { "Accept": "application/json" }
+        });
+
+        if (response.ok) {
+          showToast("🎉 ¡Gracias por suscribirte! Te avisaremos de nuevas publicaciones.");
+          subscribeForm.reset();
+          // Clear success states after reset
+          clearFieldError(nameInput, nameError);
+          clearFieldError(emailInput, emailError);
+          nameInput.closest(".input-icon-wrapper").classList.remove("input-success");
+          emailInput.closest(".input-icon-wrapper").classList.remove("input-success");
+        } else {
+          showToast("⚠️ Hubo un problema. Intenta nuevamente.");
+        }
+      } catch (error) {
+        showToast("⚠️ Error de conexión. Verifica tu internet e intenta de nuevo.");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
+      }
+    });
+  }
+
   // Initialize App
   renderCategoryPills();
   filterAndRenderProducts();

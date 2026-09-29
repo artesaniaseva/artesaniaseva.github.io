@@ -369,6 +369,51 @@
     </div>
   </section>
 
+  <!-- SUBSCRIPTION / NEWSLETTER SECTION -->
+  <section class="subscribe-section" id="suscribirse">
+    <div class="subscribe-container">
+      <div class="subscribe-icon-wrapper">
+        <i class="bi bi-bell-fill"></i>
+      </div>
+      <h2 class="subscribe-title">Sé el Primero en Conocer Nuevas Publicaciones</h2>
+      <p class="subscribe-desc">
+        Déjanos tu nombre y correo para avisarte cada vez que publiquemos nuevos productos.
+        Sin spam, solo novedades exclusivas.
+      </p>
+
+      <form id="subscribeForm" class="subscribe-form" action="https://formspree.io/f/xnpnwzbp" method="POST" novalidate>
+        <div class="subscribe-fields">
+          <div class="subscribe-field">
+            <label for="subscribeName" class="sr-only">Tu nombre</label>
+            <div class="input-icon-wrapper">
+              <i class="bi bi-person-fill"></i>
+              <input type="text" id="subscribeName" name="name" placeholder="Tu nombre" required
+                aria-label="Tu nombre" />
+            </div>
+            <span class="field-error" id="nameError"></span>
+          </div>
+          <div class="subscribe-field">
+            <label for="subscribeEmail" class="sr-only">Tu correo electrónico</label>
+            <div class="input-icon-wrapper">
+              <i class="bi bi-envelope-fill"></i>
+              <input type="email" id="subscribeEmail" name="email" placeholder="tucorreo@ejemplo.com" required
+                aria-label="Tu correo electrónico" />
+            </div>
+            <span class="field-error" id="emailError"></span>
+          </div>
+          <button type="submit" class="subscribe-btn" id="subscribeBtn">
+            <i class="bi bi-send-fill"></i>
+            <span>Suscribirme</span>
+          </button>
+        </div>
+        <p class="subscribe-privacy">
+          <i class="bi bi-shield-lock-fill"></i>
+          Tu información está segura. No compartimos tus datos con terceros.
+        </p>
+      </form>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-container">
@@ -386,6 +431,7 @@
           <li><a href="#">Inicio</a></li>
           <li><a href="#catalogo">Catálogo de Productos</a></li>
           <li><a href="#historia">Nuestra Historia</a></li>
+          <li><a href="#suscribirse">Suscríbete</a></li>
           <li><a href="#compartir-sitio">Compartir Sitio Web</a></li>
         </ul>
       </div>
