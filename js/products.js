@@ -138,46 +138,48 @@ const PRODUCTS = [
   },
   {
     id: "AE-006",
-    title: "Aros de Plata con Incrustación de Concha Spondylus",
-    category: "joyeria",
-    categoryLabel: "Orfebrería y Joyas",
-    price: 34000,
-    badge: "Populares",
+    title: "Cerámica Andina de Pisac (Supay)",
+    category: "ceramica",
+    categoryLabel: "Cerámica y Alfarería",
+    price: 20000,
+    badge: "Pieza única",
     featured: false,
-    image: "assets/images/eva_joyeria_lapis.jpg",
+    image: "assets/images/arc_02.jpg",
     images: [
-      "assets/images/eva_joyeria_lapis.jpg",
-      "assets/images/eva_tejido_alpaca.jpg"
+      "assets/images/arc_02.jpg",
+      "assets/images/arc_01.jpg"
     ],
-    description: "Aros colgantes en plata 925 combinados con tonos rojizos de concha marina Spondylus pulida. Diseño inspirados en las culturas costeras del Pacífico sur.",
+    description: "Adquiere un pedazo de historia y folklore a tu hogar. Esta increíble vasija escultórica fue elaborada a mano en Pisac, Cusco (Perú). Representa una figura mitológica con detalles pintados a mano que recuerdan a las culturas precolombinas..",
     details: {
-      material: "Plata 925 y Concha Spondylus natural",
-      dimensions: "Largo total: 4 cm",
-      origin: "Arica Costa",
+      material: "Cerámica",
+      dimensions: "37 cm x 18 cm",
+      origin: "Pisac, Perú",
       stockStatus: "Disponible",
-      craftsman: "Taller Artesanal Eva"
+      craftsman: "Luciano P.H."
     }
   },
   {
     id: "AE-007",
-    title: "Camino de Mesa Andino Tejido a Mano",
-    category: "textil",
-    categoryLabel: "Tejidos y Textiles",
-    price: 29000,
-    badge: "Tradicional",
+    title: "Cerámica Andina de Pisac (Ave Sagrada)",
+    category: "ceramica",
+    categoryLabel: "Cerámica y Alfarería",
+    price: 20000,
+    badge: "Pieza única",
     featured: false,
-    image: "assets/images/eva_tejido_alpaca.jpg",
+    image: "assets/images/arc_03.jpg",
     images: [
-      "assets/images/eva_tejido_alpaca.jpg",
-      "assets/images/eva_tallado_madera.jpg"
+      "assets/images/arc_03.jpg",
+      "assets/images/arc_04.jpg",
+      "assets/images/arc_05.jpg",
+      "assets/images/arc_06.jpg"
     ],
-    description: "Camino de mesa decorativo multicolor confeccionado con hilos de ovillo natural y guarda altiplánica tradicional.",
+    description: "Adquiere un pedazo de historia y folklore a tu hogar. Esta increíble vasija escultórica fue elaborada a mano en Pisac, Cusco (Perú). Representa una figura mitológica con detalles pintados a mano que recuerdan a las culturas precolombinas..",
     details: {
-      material: "Lana sintética y algodón natural",
-      dimensions: "160 cm x 35 cm",
-      origin: "Putre",
+      material: "Cerámica",
+      dimensions: "37 cm x 18 cm",
+      origin: "Pisac, Perú",
       stockStatus: "Disponible",
-      craftsman: "Artesanías Putre"
+      craftsman: "Luciano P.H."
     }
   },
   {
