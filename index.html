@@ -10,8 +10,11 @@
   <meta name="description"
     content="Catálogo exclusivo de Artesanías Eva en Arica. Cerámicas tradicionales, joyas en plata y lapislázuli, lana de alpaca y esculturas únicas. Envíos a todo Chile." />
   <meta name="keywords"
-    content="Artesanias Eva, Arica, artesanía chilena, lapislázuli, lana de alpaca, alfarería diaguita, madera noble, compras Arica, artesanía exclusiva" />
+    content="Artesanias Eva, Arica, artesanía chilena, lapislázuli, lana de alpaca, alfarería diaguita, madera noble, compras Arica, artesanía exclusiva, bronce, espejos artesanales, ajedrez tallado" />
   <meta name="author" content="Artesanías Eva" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <link rel="canonical" href="https://artesaniaseva.github.io/" />
+  <meta name="theme-color" content="#C85A32" />
 
   <!-- Open Graph / WhatsApp Preview Meta -->
   <meta property="og:type" content="website" />
@@ -22,6 +25,10 @@
   <meta property="og:image" content="https://artesaniaseva.github.io/assets/images/logo.png" />
   <meta property="og:image:secure_url" content="https://artesaniaseva.github.io/assets/images/logo.png" />
   <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:locale" content="es_CL" />
+  <meta property="og:site_name" content="Artesanías Eva" />
 
   <!-- Twitter Card Meta -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -33,6 +40,127 @@
   <!-- Favicon & Touch Icon -->
   <link rel="icon" type="image/png" href="assets/images/logo.png" />
   <link rel="apple-touch-icon" href="assets/images/logo.png" />
+
+  <!-- Structured Data: Organization (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Artesanías Eva",
+    "url": "https://artesaniaseva.github.io/",
+    "logo": "https://artesaniaseva.github.io/assets/images/logo.png",
+    "description": "Catálogo exclusivo de piezas artesanales únicas y de colección desde Arica, Chile. Cerámicas, bronce, madera, plata y lana de alpaca.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Arica",
+      "addressRegion": "Arica y Parinacota",
+      "addressCountry": "CL"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+56954945733",
+      "contactType": "sales",
+      "availableLanguage": "Spanish"
+    },
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Structured Data: WebSite with SearchAction (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Artesanías Eva",
+    "url": "https://artesaniaseva.github.io/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://artesaniaseva.github.io/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: Product Catalog (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Catálogo de Artesanías Eva",
+    "description": "Colección de piezas artesanales únicas: cerámicas, bronces, tallados en madera, espejos pintados a mano y más.",
+    "numberOfItems": 15,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Product",
+          "name": "Pareja de Quijote y Sancho",
+          "image": "https://artesaniaseva.github.io/assets/images/qui_02.jpeg",
+          "description": "Set de dos figuras artesanales de bronce envejecido, representando a Don Quijote y Sancho Panza.",
+          "offers": {
+            "@type": "Offer",
+            "price": "30000",
+            "priceCurrency": "CLP",
+            "availability": "https://schema.org/InStock",
+            "url": "https://artesaniaseva.github.io/#catalogo"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Product",
+          "name": "Tallado en Madera - Ajedrez (Grande)",
+          "image": "https://artesaniaseva.github.io/assets/images/aje_gr_01.jpeg",
+          "description": "Juego de ajedrez tallado a mano en noble madera mara con figuras precolombinas.",
+          "offers": {
+            "@type": "Offer",
+            "price": "90000",
+            "priceCurrency": "CLP",
+            "availability": "https://schema.org/InStock",
+            "url": "https://artesaniaseva.github.io/#catalogo"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Product",
+          "name": "Tallado en Madera - Ajedrez (Mediano)",
+          "image": "https://artesaniaseva.github.io/assets/images/aje_me_01.jpeg",
+          "description": "Juego de ajedrez tallado a mano en noble madera mara con figuras precolombinas.",
+          "offers": {
+            "@type": "Offer",
+            "price": "80000",
+            "priceCurrency": "CLP",
+            "availability": "https://schema.org/InStock",
+            "url": "https://artesaniaseva.github.io/#catalogo"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Product",
+          "name": "Espejo Artesanal Pintado a Mano",
+          "image": "https://artesaniaseva.github.io/assets/images/esp_01.jpg",
+          "description": "Espejo artesanal enmarcado y pintado a mano con motivos florales andinos.",
+          "offers": {
+            "@type": "Offer",
+            "price": "45000",
+            "priceCurrency": "CLP",
+            "availability": "https://schema.org/InStock",
+            "url": "https://artesaniaseva.github.io/#catalogo"
+          }
+        }
+      }
+    ]
+  }
+  </script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

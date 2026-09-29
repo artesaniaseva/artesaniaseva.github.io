@@ -1,0 +1,8 @@
+# Robots.txt - Artesanías Eva
+# https://artesaniaseva.github.io/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://artesaniaseva.github.io/sitemap.xml
