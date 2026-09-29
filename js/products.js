@@ -30,7 +30,7 @@ const PRODUCTS = [
     title: "Pareja de Quijote y Sancho",
     category: "bronce",
     categoryLabel: "Decoración y Bronce",
-    price: 20000,
+    price: 30000,
     badge: "Pieza Única",
     featured: true,
     image: "assets/images/qui_02.jpeg",
@@ -274,6 +274,56 @@ const PRODUCTS = [
   },
   {
     id: "AE-012",
+    title: "Tallado en Madera - Ajedrez (Grande)",
+    category: "madera",
+    categoryLabel: "Esculturas en Madera",
+    price: 90000,
+    badge: "Pieza de Colección",
+    featured: false,
+    image: "assets/images/aje_gr_01.jpeg",
+    images: [
+      "assets/images/aje_gr_01.jpeg",
+      "assets/images/aje_gr_02.jpeg",
+      "assets/images/aje_gr_03.jpeg",
+      "assets/images/aje_gr_04.jpeg",
+      "assets/images/aje_gr_05.jpeg",
+      "assets/images/aje_gr_06.jpeg"
+    ],
+    description: "Pieza única tallada a mano en noble madera mara. Este juego de ajedrez combina la estrategia clásica con el arte andino, presentando figuras antropomorfas precolombinas y un elegante tablero octogonal con relieves decorativos. Ideal para coleccionistas, amantes del ajedrez o como un regalo con identidad cultural. ¡Una obra de arte funcional que durará generaciones!",
+    details: {
+      material: "Madera Mara",
+      dimensions: "Alto: 55 cm | Ancho: 60 cm",
+      origin: "Bolivia",
+      stockStatus: "Disponible 1 ejemplar",
+      craftsman: "-"
+    }
+  },
+  {
+    id: "AE-013",
+    title: "Tallado en Madera - Ajedrez (Mediano)",
+    category: "madera",
+    categoryLabel: "Esculturas en Madera",
+    price: 80000,
+    badge: "Pieza de Colección",
+    featured: false,
+    image: "assets/images/aje_me_01.jpeg",
+    images: [
+      "assets/images/aje_me_01.jpeg",
+      "assets/images/aje_me_02.jpg",
+      "assets/images/aje_me_03.jpg",
+      "assets/images/aje_me_04.jpg"
+    ],
+    description: "Pieza única tallada a mano en noble madera mara. Este juego de ajedrez combina la estrategia clásica con el arte andino, presentando figuras antropomorfas precolombinas y un elegante tablero octogonal con relieves decorativos. Ideal para coleccionistas, amantes del ajedrez o como un regalo con identidad cultural. ¡Una obra de arte funcional que durará generaciones!",
+    details: {
+      material: "Madera Mara",
+      dimensions: "Alto: 53 cm | Ancho: 46 cm",
+      origin: "Bolivia",
+      stockStatus: "Disponible 1 ejemplar",
+      craftsman: "-"
+    }
+  },
+  {
+    id: "AE-014",
     title: "Espejo Artesanal Pintado a Mano (Verde)",
     category: "cuadro",
     categoryLabel: "Cuadros y Espejos",
@@ -295,7 +345,7 @@ const PRODUCTS = [
     }
   },
   {
-    id: "AE-013",
+    id: "AE-015",
     title: "Espejo Artesanal Pintado a Mano (Mixto)",
     category: "cuadro",
     categoryLabel: "Cuadros y Espejos",
