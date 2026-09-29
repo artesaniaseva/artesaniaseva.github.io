@@ -313,6 +313,11 @@ document.addEventListener("DOMContentLoaded", () => {
         window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${text}`, "_blank", "noopener,noreferrer");
         break;
       }
+      case "instagram": {
+        const text = encodeURIComponent(`Descubre "${prod.title}" de Arica en Artesanías Eva`);
+        window.open(`https://www.instagram.com/share?url=${encodeURIComponent(shareUrl)}&text=${text}`, "_blank", "noopener,noreferrer");
+        break;
+      }
       case "pinterest": {
         window.open(`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(shareUrl)}&media=${encodeURIComponent(fullImageUrl)}&description=${encodeURIComponent(prod.title)}`, "_blank", "noopener,noreferrer");
         break;
@@ -338,7 +343,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: prod.title,
             text: prod.description,
             url: shareUrl
-          }).catch(() => {});
+          }).catch(() => { });
         } else {
           shareProductOn("copy");
         }
@@ -351,6 +356,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnShareWa = document.getElementById("btnShareProductWa");
   const btnShareFb = document.getElementById("btnShareProductFb");
   const btnShareTw = document.getElementById("btnShareProductTw");
+  const btnShareInst = document.getElementById("btnShareProductInst");
   const btnSharePin = document.getElementById("btnShareProductPin");
   const btnShareTg = document.getElementById("btnShareProductTg");
   const btnShareCopy = document.getElementById("btnShareProductCopy");
@@ -359,6 +365,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (btnShareWa) btnShareWa.addEventListener("click", () => shareProductOn("whatsapp"));
   if (btnShareFb) btnShareFb.addEventListener("click", () => shareProductOn("facebook"));
   if (btnShareTw) btnShareTw.addEventListener("click", () => shareProductOn("twitter"));
+  if (btnShareInst) btnShareInst.addEventListener("click", () => shareProductOn("instagram"));
   if (btnSharePin) btnSharePin.addEventListener("click", () => shareProductOn("pinterest"));
   if (btnShareTg) btnShareTg.addEventListener("click", () => shareProductOn("telegram"));
   if (btnShareCopy) btnShareCopy.addEventListener("click", () => shareProductOn("copy"));
@@ -390,6 +397,11 @@ document.addEventListener("DOMContentLoaded", () => {
         window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(siteUrl)}&text=${text}`, "_blank", "noopener,noreferrer");
         break;
       }
+      case "instagram": {
+        const text = encodeURIComponent(`Descubre el catálogo de Artesanías Eva en Arica, Chile`);
+        window.open(`https://www.instagram.com/share?url=${encodeURIComponent(siteUrl)}&text=${text}`, "_blank", "noopener,noreferrer");
+        break;
+      }
       case "pinterest": {
         window.open(`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(siteUrl)}&description=${encodeURIComponent("Artesanías Eva - Catálogo exclusivo de artesanías de Arica, Chile")}`, "_blank", "noopener,noreferrer");
         break;
@@ -415,7 +427,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Artesanías Eva",
             text: "Piezas únicas y exclusivas con historia y alma en Arica, Chile.",
             url: siteUrl
-          }).catch(() => {});
+          }).catch(() => { });
         } else {
           shareWebsiteOn("copy");
         }
@@ -428,6 +440,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnSiteWa = document.getElementById("btnSiteShareWa");
   const btnSiteFb = document.getElementById("btnSiteShareFb");
   const btnSiteTw = document.getElementById("btnSiteShareTw");
+  const btnSiteInst = document.getElementById("btnSiteShareInst");
   const btnSitePin = document.getElementById("btnSiteSharePin");
   const btnSiteTg = document.getElementById("btnSiteShareTg");
   const btnSiteCopy = document.getElementById("btnSiteShareCopy");
@@ -436,6 +449,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (btnSiteWa) btnSiteWa.addEventListener("click", () => shareWebsiteOn("whatsapp"));
   if (btnSiteFb) btnSiteFb.addEventListener("click", () => shareWebsiteOn("facebook"));
   if (btnSiteTw) btnSiteTw.addEventListener("click", () => shareWebsiteOn("twitter"));
+  if (btnSiteInst) btnSiteInst.addEventListener("click", () => shareWebsiteOn("instagram"));
   if (btnSitePin) btnSitePin.addEventListener("click", () => shareWebsiteOn("pinterest"));
   if (btnSiteTg) btnSiteTg.addEventListener("click", () => shareWebsiteOn("telegram"));
   if (btnSiteCopy) btnSiteCopy.addEventListener("click", () => shareWebsiteOn("copy"));

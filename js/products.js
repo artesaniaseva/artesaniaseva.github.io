@@ -64,7 +64,7 @@ const PRODUCTS = [
     description: "Hermoso cuadro decorativo de inspiración Tiwanaku, adquirido en Bolivia, con diseño de temática andina y acabado metálico que aparenta ser lámina de cobre.",
     details: {
       material: "Lámina de cobre repujado",
-      dimensions: "35 cm x 39 cm",
+      dimensions: "Alto 39 cm x Ancho 35 cm",
       origin: "Bolivia",
       stockStatus: "Disponible 1 ejemplar",
       craftsman: "Miguel Galindo"
@@ -86,7 +86,7 @@ const PRODUCTS = [
     description: "Hermoso cuadro decorativo de inspiración Tiwanaku, adquirido en Bolivia, con diseño de temática andina y acabado metálico que aparenta ser lámina de cobre.",
     details: {
       material: "Lámina de cobre repujado",
-      dimensions: "30 cm x 30 cm",
+      dimensions: "Alto 30 cm x Ancho 30 cm",
       origin: "Bolivia",
       stockStatus: "Disponible 1 ejemplar",
       craftsman: "Miguel Galindo"
@@ -108,7 +108,7 @@ const PRODUCTS = [
     description: "Hermoso cuadro decorativo de inspiración Tiwanaku, adquirido en Bolivia, con diseño de temática andina y acabado metálico que aparenta ser lámina de cobre.",
     details: {
       material: "Lámina de cobre repujado",
-      dimensions: "30 cm x 30 cm",
+      dimensions: "Alto 30 cm x Ancho 30 cm",
       origin: "Bolivia",
       stockStatus: "Disponible 1 ejemplar",
       craftsman: "Miguel Galindo"
@@ -130,7 +130,7 @@ const PRODUCTS = [
     description: "Hermoso cuadro decorativo de inspiración Costumbrista/Colonial, adquirido en Bolivia, con diseño de temática andina y acabado metálico que aparenta ser lámina de cobre.",
     details: {
       material: "Lámina de cobre repujado",
-      dimensions: "30 cm x 30 cm",
+      dimensions: "Alto 30 cm x Ancho 30 cm",
       origin: "Bolivia",
       stockStatus: "Disponible 1 ejemplar",
       craftsman: "Miguel Galindo"
@@ -138,6 +138,27 @@ const PRODUCTS = [
   },
   {
     id: "AE-006",
+    title: "Catedral de San Marcos de Arica (Chile)",
+    category: "cuadro",
+    categoryLabel: "Cuadros y Espejos",
+    price: 12000,
+    badge: "Pieza de Colección",
+    featured: true,
+    image: "assets/images/cua_09.jpg",
+    images: [
+      "assets/images/cua_09.jpg"
+    ],
+    description: "¡Una pieza con historia! Este hermoso cuadro en relieve de cobre repujado representa la majestuosa Catedral de San Marcos de Arica, Chile.",
+    details: {
+      material: "Lámina de cobre repujado",
+      dimensions: "Alto 30 cm x Ancho 30 cm",
+      origin: "Arica, Chile",
+      stockStatus: "Disponible",
+      craftsman: "-"
+    }
+  },
+  {
+    id: "AE-007",
     title: "Cerámica Andina de Pisac (Supay)",
     category: "ceramica",
     categoryLabel: "Cerámica y Alfarería",
@@ -152,14 +173,14 @@ const PRODUCTS = [
     description: "Adquiere un pedazo de historia y folklore a tu hogar. Esta increíble vasija escultórica fue elaborada a mano en Pisac, Cusco (Perú). Representa una figura mitológica con detalles pintados a mano que recuerdan a las culturas precolombinas..",
     details: {
       material: "Cerámica",
-      dimensions: "37 cm x 18 cm",
+      dimensions: "Alto 37 cm x Ancho 18 cm",
       origin: "Pisac, Perú",
-      stockStatus: "Disponible",
+      stockStatus: "Disponible 1 ejemplar",
       craftsman: "Luciano P.H."
     }
   },
   {
-    id: "AE-007",
+    id: "AE-008",
     title: "Cerámica Andina de Pisac (Ave Sagrada)",
     category: "ceramica",
     categoryLabel: "Cerámica y Alfarería",
@@ -178,16 +199,16 @@ const PRODUCTS = [
       material: "Cerámica",
       dimensions: "Alto 37 cm x Ancho 18 cm",
       origin: "Pisac, Perú",
-      stockStatus: "Disponible",
+      stockStatus: "Disponible 1 ejemplar",
       craftsman: "Luciano P.H."
     }
   },
   {
-    id: "AE-008",
-    title: "Par de Cuadro Tallado PAreja Indígena",
+    id: "AE-009",
+    title: "Par de Cuadro Tallado Pareja Indígena (chico)",
     category: "madera",
     categoryLabel: "Esculturas en Madera",
-    price: 28000,
+    price: 25000,
     badge: "Pieza de Colección",
     featured: false,
     image: "assets/images/tall_01.jpg",
@@ -199,9 +220,99 @@ const PRODUCTS = [
     description: "Par de piezas decorativas de madera Mara tallada. Son rostros de perfil con tocados tradicionales.",
     details: {
       material: "Madera Mara",
-      dimensions: "Alto: 36 cm | Ancho: 12 cm",
+      dimensions: "Alto: 24 cm | Ancho: 15 cm",
       origin: "Bolivia",
-      stockStatus: "Disponible (Pieza única)",
+      stockStatus: "Disponible 1 par",
+      craftsman: "-"
+    }
+  },
+  {
+    id: "AE-010",
+    title: "Par de Cuadro Tallado Pareja Indígena (mediano)",
+    category: "madera",
+    categoryLabel: "Esculturas en Madera",
+    price: 28000,
+    badge: "Pieza de Colección",
+    featured: false,
+    image: "assets/images/tall_04.jpg",
+    images: [
+      "assets/images/tall_04.jpg",
+      "assets/images/tall_05.jpg",
+      "assets/images/tall_06.jpg"
+    ],
+    description: "Par de piezas decorativas de madera Mara tallada. Son rostros de perfil con tocados tradicionales.",
+    details: {
+      material: "Madera Mara",
+      dimensions: "Alto: 36 cm | Ancho: 21 cm",
+      origin: "Bolivia",
+      stockStatus: "Disponible 1 par",
+      craftsman: "-"
+    }
+  },
+  {
+    id: "AE-011",
+    title: "Tallado en Madera - Músico Andino",
+    category: "madera",
+    categoryLabel: "Esculturas en Madera",
+    price: 25000,
+    badge: "Pieza de Colección",
+    featured: false,
+    image: "assets/images/tall_07.jpg",
+    images: [
+      "assets/images/tall_07.jpg",
+      "assets/images/tall_08.jpg",
+      "assets/images/tall_09.jpg"
+    ],
+    description: "Una pieza vertical con mucha presencia y carácter. Este relieve tallado en madera Mara representa un personaje ceremonial con rasgos marcados, sosteniendo una zampoña.",
+    details: {
+      material: "Madera Mara",
+      dimensions: "Alto: 58 cm | Ancho: 8 cm",
+      origin: "Bolivia",
+      stockStatus: "Disponible 1 ejemplar",
+      craftsman: "-"
+    }
+  },
+  {
+    id: "AE-012",
+    title: "Espejo Artesanal Pintado a Mano (Verde)",
+    category: "cuadro",
+    categoryLabel: "Cuadros y Espejos",
+    price: 45000,
+    badge: "Pieza de Colección",
+    featured: false,
+    image: "assets/images/esp_01.jpg",
+    images: [
+      "assets/images/esp_01.jpg",
+      "assets/images/esp_02.jpg"
+    ],
+    description: "Hermoso espejo decorativo artesanal con marco de madera ortogonal estilo Talavera pintado a mano.",
+    details: {
+      material: "Madera/Vidrio",
+      dimensions: "Alto: 63 cm | Ancho: 53 cm",
+      origin: "Perú",
+      stockStatus: "Disponible (Exclusivo)",
+      craftsman: "-"
+    }
+  },
+  {
+    id: "AE-013",
+    title: "Espejo Artesanal Pintado a Mano (Mixto)",
+    category: "cuadro",
+    categoryLabel: "Cuadros y Espejos",
+    price: 35000,
+    badge: "Pieza de Colección",
+    featured: false,
+    image: "assets/images/esp_03.jpg",
+    images: [
+      "assets/images/esp_03.jpg",
+      "assets/images/esp_04.jpg"
+    ],
+    description: "Hermoso espejo decorativo artesanal con marco de madera ortogonal estilo Talavera pintado a mano.",
+    details: {
+      material: "Madera/Vidrio",
+      dimensions: "Alto: 55 cm | Ancho: 49 cm",
+      origin: "Perú",
+      stockStatus: "Disponible (Exclusivo)",
       craftsman: "-"
     }
   }
