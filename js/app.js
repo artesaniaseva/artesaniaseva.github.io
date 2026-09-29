@@ -505,6 +505,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // WhatsApp Header "Contacto Directo" Button
+  const btnWhatsappHeader = document.getElementById("btnWhatsappHeader");
+  if (btnWhatsappHeader) {
+    btnWhatsappHeader.addEventListener("click", (e) => {
+      e.preventDefault();
+      const message = encodeURIComponent("¡Hola! Me interesa conocer más sobre las piezas de Artesanías Eva. 🏺");
+      window.open(`https://wa.me/${STORE_CONFIG.whatsappNumber}?text=${message}`, "_blank", "noopener,noreferrer");
+    });
+  }
+
   // Initialize App
   renderCategoryPills();
   filterAndRenderProducts();
