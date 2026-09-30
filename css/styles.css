@@ -592,6 +592,86 @@ img {
 }
 
 /* ==========================================================================
+   LOAD MORE PRODUCTS BUTTON
+   ========================================================================== */
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-load-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.95rem 2.25rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--bg-surface);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(200, 90, 50, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.02em;
+}
+
+.btn-load-more i {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.load-more-badge {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.03em;
+}
+
+.btn-load-more:hover {
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+  color: white;
+  border-color: transparent;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(200, 90, 50, 0.3);
+}
+
+.btn-load-more:hover i {
+  transform: rotate(90deg);
+}
+
+.btn-load-more:hover .load-more-badge {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+.btn-load-more:active {
+  transform: translateY(-1px);
+}
+
+/* Card Animation when loaded */
+.product-card {
+  animation: cardFadeIn 0.45s ease backwards;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
    PRODUCT DETAIL MODAL
    ========================================================================== */
 .modal-overlay {

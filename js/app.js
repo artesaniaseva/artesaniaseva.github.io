@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
     searchQuery: "",
     sortBy: "default",
     currentProduct: null,
-    currentImageIndex: 0
+    currentImageIndex: 0,
+    visibleCount: 8
   };
 
   // DOM Elements
@@ -20,6 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const productCounter = document.getElementById("productCounter");
   const searchInput = document.getElementById("searchInput");
   const sortSelect = document.getElementById("sortSelect");
+  const loadMoreContainer = document.getElementById("loadMoreContainer");
+  const btnLoadMore = document.getElementById("btnLoadMore");
+  const loadMoreBadge = document.getElementById("loadMoreBadge");
 
   // Modal Elements
   const productModal = document.getElementById("productModal");
@@ -82,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.addEventListener("click", () => {
         state.selectedCategory = btn.getAttribute("data-category");
         renderCategoryPills();
-        filterAndRenderProducts();
+        filterAndRenderProducts(true);
       });
     });
   }
@@ -108,12 +112,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Render Product Grid
-  function filterAndRenderProducts() {
+  // Render Product Grid (with pagination / lazy loading)
+  function filterAndRenderProducts(resetPagination = true) {
+    if (resetPagination) {
+      state.visibleCount = 8;
+    }
+
     const filtered = getFilteredProducts();
+    const visibleProducts = filtered.slice(0, state.visibleCount);
 
     if (productCounter) {
-      productCounter.innerHTML = `Mostrando <strong>${filtered.length}</strong> ${filtered.length === 1 ? "pieza artesanal" : "piezas artesanales"}`;
+      if (filtered.length === 0) {
+        productCounter.innerHTML = "Sin resultados";
+      } else if (filtered.length <= 8 || visibleProducts.length >= filtered.length) {
+        productCounter.innerHTML = `Mostrando <strong>${filtered.length}</strong> ${filtered.length === 1 ? "pieza artesanal" : "piezas artesanales"}`;
+      } else {
+        productCounter.innerHTML = `Mostrando <strong>${visibleProducts.length}</strong> de <strong>${filtered.length}</strong> piezas artesanales`;
+      }
     }
 
     if (filtered.length === 0) {
@@ -124,13 +139,14 @@ document.addEventListener("DOMContentLoaded", () => {
           <p class="text-muted">Prueba seleccionando otra categoría o borrando los términos de búsqueda.</p>
         </div>
       `;
+      if (loadMoreContainer) loadMoreContainer.style.display = "none";
       return;
     }
 
-    productsGrid.innerHTML = filtered.map(prod => `
+    productsGrid.innerHTML = visibleProducts.map(prod => `
       <article class="product-card" data-id="${prod.id}">
         <div class="card-image-box">
-          <img src="${prod.image}" alt="${prod.title}" class="card-image" loading="lazy" />
+          <img src="${prod.image}" alt="${prod.title}" class="card-image" loading="lazy" decoding="async" />
           ${prod.badge ? `<span class="card-badge">${prod.badge}</span>` : ""}
         </div>
         <div class="card-body">
@@ -151,6 +167,27 @@ document.addEventListener("DOMContentLoaded", () => {
         const prodId = card.getAttribute("data-id");
         openProductModal(prodId);
       });
+    });
+
+    // Handle "Cargar más" button visibility and badge
+    if (loadMoreContainer && btnLoadMore) {
+      const remaining = filtered.length - visibleProducts.length;
+      if (remaining > 0) {
+        loadMoreContainer.style.display = "flex";
+        if (loadMoreBadge) {
+          loadMoreBadge.textContent = `+${Math.min(remaining, 8)}`;
+        }
+      } else {
+        loadMoreContainer.style.display = "none";
+      }
+    }
+  }
+
+  // Load More Button Listener
+  if (btnLoadMore) {
+    btnLoadMore.addEventListener("click", () => {
+      state.visibleCount += 8;
+      filterAndRenderProducts(false);
     });
   }
 
